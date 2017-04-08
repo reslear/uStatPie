@@ -49,7 +49,7 @@
 
 
     // Public
-    uStatPie.prototype.init = function(user, guest) {
+    uStatPie.prototype.init = function() {
 
         if( !this.CONTAINER ) return false;
 
