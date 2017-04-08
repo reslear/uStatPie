@@ -1,0 +1,28 @@
+﻿/*!
+    uStatPie - v0.1 release, визуальная статистика онлайн пользователей и гостей
+    (c) 2016 Korchevskiy Evgeniy (aka ReSLeaR-)
+    ---
+    vk.com/reslear | upost.su | github.com/reslear
+    Released under the MIT @license.
+!*/
+
+.stat-pie{display:flex;justify-content: flex-start;}
+.stat-pie--g{font-size: 1.7rem;transform: translate(50px,50px);}
+.stat-pie--puser{fill: #4086FD;}
+.stat-pie--pguest{fill: #B5BDCC;font-size: 1.3rem;}
+
+.stat-pie--front{
+    animation: stat-pie--front 30s linear infinite;
+    transform-origin:50% 50%;
+    transform:rotate(-90deg);
+    transition: stroke-dasharray .5s;
+}
+@keyframes stat-pie--front{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
+.stat-pie--users{margin-left: 1rem;display:flex; flex-direction: column; justify-content:center;}
+.stat-pie--users b{padding-right:1rem}
+    .stat-pie--guest{color:#B5BDCC;border-top: 1px solid #f7f7f7;padding-top: .3rem;margin-top: .3rem;}
+    .stat-pie--user{color:#4086FD}
