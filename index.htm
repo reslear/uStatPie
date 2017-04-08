@@ -3,8 +3,38 @@
     <div class="stat-pie">
         <div class="tOnline" id="onl1">Онлайн всего: <b>1</b></div> <div class="gOnline" id="onl2">Гостей: <b>3</b></div> <div class="uOnline" id="onl3">Пользователей: <b>1</b></div>
     </div>
-</html>
-<script src="ustatpie.reslear.upost.su.js"></script>
-<link rel="stylesheet" href="ustatpie.reslear.upost.su.css" />
 
-<script>var stat = new uStatPie();</script>
+    <div class="aaa">
+        <a href="javascript://">312/34</a>
+        <a href="javascript://">31/3</a>
+        <a href="javascript://">72/72</a>
+        <a href="javascript://">0/22</a>
+        <a href="javascript://">134/0</a>
+        <a href="javascript://">132/1</a>
+        <a href="javascript://">1/132</a>
+    </div>
+</html>
+
+<script src="ustatpie.reslear.upost.su.js"></script>
+<script>
+var stat = new uStatPie();
+
+var links = document.querySelectorAll('.aaa > a');
+
+[].forEach.call(links, function(link) {
+    var arr = link.innerHTML.split('/');
+    link.onclick = function() {
+        stat.update(arr[0],arr[1]);
+    }
+});
+
+</script>
+
+<link rel="stylesheet" href="ustatpie.reslear.upost.su.css" />
+<link rel="stylesheet" href="https://reslear.github.io/demo/css/button/fonts.css" />
+
+<style>
+html{ font-family: Rounded,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" ;}
+body{ width: 960px; margin:50px auto; }
+.aaa{ margin-top:50px; }
+</style>

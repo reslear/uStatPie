@@ -159,12 +159,13 @@
 
         // fix visual min 1 vs 1000
         var rzn = circum - perc;
-        console.log(rzn);
         perc = rzn < 10 && rzn !== 0 ? perc - 10 : perc;
+
+        var percent = u_perc < 50 ? Math.ceil(u_perc) : Math.floor(u_perc);
 
         return {
             val: perc + ' ' + circum,
-            percent: {user: Math.ceil(u_perc) + '%', guest: Math.ceil(100 - u_perc) + '%'},
+            percent: {user: percent + '%', guest: (100 - percent) + '%'},
             num: {user: obj.user, guest: obj.guest}
         };
     };
