@@ -11,17 +11,9 @@
     "use strict";
 
     // Constructor
-    window.uStatPie = function(container, colors, common, selector, size) {
+    window.uStatPie = function(container, common, selector, size) {
 
         this.CONTAINER = document.querySelector(container || '.stat-pie');
-
-        this.COLORS = extend({
-            back: '#F6F8FB',
-            inner : 'transparent',
-            front: '#317AFC',
-            user_text:'#6B7C99',
-            guest_text:'red',
-        }, colors || {});
 
         this.COMMON = extend({
             cx: 50,
@@ -57,11 +49,8 @@
         var dasharray = this.dasharray(this.CONTAINER);
 
         var circles = {
-            'stat-pie--back' : {
-                stroke: this.COLORS.back,
-            },
+            'stat-pie--back' : {},
             'stat-pie--front' : {
-                stroke: this.COLORS.front,
                 'stroke-dasharray' : dasharray.val
             }
         };
